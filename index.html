@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is our Main Page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* body styling */
+        body{
+            margin:0;
+            padding:0;
+            /* background-image: url(comp2.jpg); */
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+
+        }
+        /* navbar */
+        .navbar{
+            /* float:left; */
+            /* margin:auto; position the border in the center */
+            background:grey;
+            /* width:700px; */
+            height: 70px;
+            border: 5px solid gold;
+            background-image: url('backimg1.jpg');
+            background-size: cover;
+           
+
+        }
+        ul{
+            text-align: center;
+            list-style-type:none; /* removes the dot fromt the side of the list*/
+        }
+        ul li{
+            display:inline-block;
+            
+        }
+        li a{
+            text-decoration: none; /* removes the default line from under the menu word*/
+            margin:10px;
+            padding:15px;
+            color:white;
+            /* text-shadow: 2px 2px; */
+            font-size: 20px;
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        }
+        li a:hover{
+            color:blue;
+            background-color: white;
+            text-transform:uppercase; /* make text change to uppercase when hover*/
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;     
+            
+        }
+        /* organization descriptions */
+        .column,.video{
+            text-align:center;
+            float:left;
+            width: 33.3%; /* devides position among the columns*/
+            padding:25px;
+            background-color: aliceblue;
+        }
+        /* clears floats after the columns */
+        .row,.videos:after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        /* responsive layout-makes the 3 columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+        @media screen and (max-width: 600px){
+            .column,.video video,.progress-img marquee img{
+                width:100%;
+            }
+        }
+        .progress-img{
+            margin:auto;
+            width:700px;
+            
+            text-align: center;
+            border:50%;
+            border-radius: 50%;
+            /* margin:auto; */
+
+        }
+        .progress-img img{
+            width:350px;
+            height:400px;
+            padding:10px;
+            /* padding-bottom:0 ; */
+            /* border:50%; */
+            border-radius:25px 25px 25px 25px;
+        }
+        .main-img{
+            background-image: url(comp2.jpg);
+           min-height: 100%;
+          
+        }
+        .middle-img{
+            background-image: url(img5.jpg);
+            min-height:500px;
+        }
+
+        .main-img,.middle-img, .last-img{
+            background-size:cover;
+           position:relative;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-position:center;
+        }
+        .last-img{
+            background-image: url(img4.jpg);
+            min-height:500px;
+        }
+
+        .videos{
+            /* display:flex; */
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            padding:5px;
+            
+            align-items: center;
+            margin:auto;
+        }
+        .videos,.video{
+            text-align: center;
+            align-items: center;
+            margin:auto;
+        }
+        .video{
+            width:500px;
+            background-color: aqua;
+            /* padding:10px; */
+            align-items: center;
+            text-align: center;
+            border:10px solid goldenrod;
+            border-radius: 10px 5px 5px 10px;
+        }
+        .video video{
+            width:450px;
+        }
+        .video:hover{
+            background-color: goldenrod;
+        }
+        .vname{
+            font-size: 20px;
+            background-color: goldenrod;
+            width:300px;
+            margin: auto;
+            
+
+        }
+        .vname:hover{
+            text-transform: uppercase;
+            color:white;
+            /* background-color: aqua; */
+        }
+        .button{
+            text-align: center;
+            width:300px;
+            background-color:blue;
+            margin:auto;
+            font-size: 40px;;
+        }
+        .form{
+            margin:30px;
+            padding:20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#partner">Partner</a></li>
+        </ul>
+
+    </div>
+    <!-- set the logo in the center of the navigation bar -->
+
+    <!-- image display of our progress -->
+    <div class="main-img">
+    <div class="progress-img"> <h2 style="color:blue">Al-Aleem Tech Foundation</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="3">
+        <img src="prog1.jpg" alt="">
+        <img src="flyer.jpg" alt="">
+        <img src="prog2.jpg" alt="">
+    </marquee>
+        
+    </div>
+</div>
+
+    <!-- start of Section who are we, vision, and goal -->
+
+    <div class="row">
+        <div class="column">
+            <h2>Who are we</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                    quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                        quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                            quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+        </div>
+
+        <div class="column">
+            <h2>Our Goal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                    quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                        quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                            quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+        </div>
+        <div class="column">
+            <h2>Our vision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                    quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                        quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, distinctio tenetur! Facilis est ipsa ducimus laboriosam nulla soluta sapiente nihil velit harum debitis dolorum, modi, reiciendis voluptatum illo. Ratione 
+                            quasi quos perferendis beatae sint numquam quisquam velit quam! Ut, illum? Aut autem dolor sequi est atque tempore iste fuga quas?</p>
+        </div>
+
+
+    </div>
+    <!-- section who are we, goal and vision ends -->
+
+    <!-- section course starts -->
+    <div class="middle-img">
+        <div class="ptext">
+            <span> Free courses</span>
+        </div>
+        
+    </div>
+    <div class="videos">
+        <div class="video">
+            <video controls>
+                <source src="intro.mp4">  
+            </video>
+            <div class="vname">Why Technology</div>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="intro.mp4">  
+            </video>
+            <div class="vname">Carriers / Salaries in Technology</div>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="intro.mp4">  
+            </video>
+            <div class="vname">Computer Fundamentals</div>
+        </div>
+    </div>
+    <!-- section course ends -->
+
+
+    <!-- section froms starts -->
+    <div class="last-img">
+        <div class="ptext">
+            <span>Contact Forms</span>
+        </div>
+    </div>
+
+    <div class="form">
+        <form action="">
+            <label for="fname" id="fname">firstname</label>
+            <input type="text">
+
+            <label for="lname" id="lname">Lastname</label>
+            <input type="text">
+
+            <label for="tel">Phone#:</label>
+            <input type="tel" placeholder="986-123-4454">
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="abcdefgh@gmail.com">
+
+        </form>
+        <label for="comment">Please tell us you mind</label><br>
+        <textarea name="" id="" cols="50" rows="10"></textarea>
+        
+
+
+    </div>
+    <div class="button">
+        <button>Submit</button>
+    </div>
+   
+    <!-- end of identity, vision, and goal sections -->
+
+    <!-- forms -->
+</body>
+</html>
